@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Project4.Models.ThamGui>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+<h2>Index Thăm gửi</h2>
+<br /> @Html.Partial("_ThamGuisSearchBar")
+<br /><p>@Html.ActionLink("Thêm mới", "Create")</p>
+<br /> @Html.Partial("_ThamGuisDataTable")

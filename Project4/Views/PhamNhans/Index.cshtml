@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Project4.Models.PhamNhan>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+<h2>Index Phạm nhân</h2> 
+
+<br /> @Html.Partial("_PhamNhansSearchBar")
+<br /><p>@Html.ActionLink("Thêm mới", "Create")</p>
+<br /> @Html.Partial("_PhamNhansDataTable", Model.ToList())
