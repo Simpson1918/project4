@@ -1,11 +1,26 @@
-﻿@using (Html.BeginForm("Index", "QuanNgucs", FormMethod.Get))
+﻿@model IEnumerable<Project4.Models.QuanNguc>
+
+@using (Html.BeginForm("Index", "QuanNgucs", FormMethod.Get))
 {
     <div class="container">
-        <div class="row">
-            <input type="text" class="form-control" placeholder="Tìm kiếm">
-            <button class="btn btn-primary" type="submit">
-                <i class="fa fa-search"></i>
-            </button>
+        <div class="row"> 
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="Tìm kiếm">
+            </div>
+            <div class="col-md-2">
+                @foreach (var item in Model)
+                {
+                    @Html.DropDownListFor(modelItem => item.KhuID, ViewBag.KhuQuanLi as SelectList
+                        , "Khu quản lí", new { @class = "form-control" })
+                }
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <div class="col-md-6">
+            </div>
         </div>
     </div>
 }

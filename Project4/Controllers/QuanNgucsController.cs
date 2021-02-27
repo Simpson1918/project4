@@ -15,8 +15,10 @@ namespace Project4.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: QuanNgucs
-        public ActionResult Index()
+        public ActionResult Index() 
         {
+            var khuList = db.Khu.ToList();
+            ViewBag.KhuQuanLi = new SelectList(khuList, "ID", "ID");
             return View(db.QuanNguc.ToList());
         }
 

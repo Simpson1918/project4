@@ -1,11 +1,33 @@
-﻿@using (Html.BeginForm("Index", "Anxas", FormMethod.Get))
+﻿@model IEnumerable<Project4.Models.AnXa>
+
+@using (Html.BeginForm("Index", "Anxas", FormMethod.Get))
 {
     <div class="container">
-        <div class="row">
-            <input type="text" class="form-control" placeholder="Tìm kiếm">
-            <button class="btn btn-primary" type="submit">
-                <i class="fa fa-search"></i>
-            </button> 
+        <div class="row"> 
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="Tìm kiếm">
+            </div>
+            <div class="col-md-2">
+                @foreach (var item in Model)
+                {
+                    @Html.DropDownListFor(modelItem => item.ID, ViewBag.Khu as SelectList
+                        , "Khu", new { @class = "form-control" })
+                }
+            </div>
+            <div class="col-md-2">
+                @foreach (var item in Model) 
+                {
+                    @Html.DropDownListFor(modelItem => item.ID, ViewBag.Phong as SelectList
+                        , "Phòng giam", new { @class = "form-control" })
+                }
+            </div> 
+            <div class="col-md-1">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <div class="col-md-4">
+            </div>
         </div>
     </div>
 }

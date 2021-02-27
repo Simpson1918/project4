@@ -135,7 +135,6 @@ D:\Project444\project4-main\Project4\bin\Microsoft.Owin.Security.OAuth.xml
 D:\Project444\project4-main\Project4\bin\Microsoft.Owin.Security.Google.xml
 D:\Project444\project4-main\Project4\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Project444\project4-main\Project4\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\Project444\project4-main\Project4\obj\Debug\Project4.csprojAssemblyReference.cache
 D:\Project444\project4-main\Project4\obj\Debug\Project4.Migrations.initial.resources
 D:\Project444\project4-main\Project4\obj\Debug\Project4.csproj.GenerateResource.cache
 D:\Project444\project4-main\Project4\obj\Debug\Project4.csproj.CoreCompileInputs.cache
@@ -163,3 +162,5 @@ D:\Project444\project4-main\Project4\bin\Asserts\MasterPage\js\Chart.min.js
 D:\Project444\project4-main\Project4\bin\Asserts\MasterPage\js\dataTables.bootstrap4.min.js
 D:\Project444\project4-main\Project4\bin\Asserts\MasterPage\js\dataTables.min.js
 D:\Project444\project4-main\Project4\bin\Asserts\MasterPage\js\jquery-3.5.1.slim.min.js
+D:\Project444\project4-main\Project4\obj\Debug\Project4.Migrations.initial1.resources
+D:\Project444\project4-main\Project4\obj\Debug\Project4.csprojAssemblyReference.cache

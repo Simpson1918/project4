@@ -17,6 +17,8 @@ namespace Project4.Controllers
         // GET: CheDoNghiPhepCuaQuanNgucs
         public ActionResult Index()
         {
+            var khuList = db.Khu.ToList();
+            ViewBag.KhuQuanLi = new SelectList(khuList, "ID", "ID"); 
             return View(db.CheDoNghiPhepCuaQuanNguc.ToList());
         }
 

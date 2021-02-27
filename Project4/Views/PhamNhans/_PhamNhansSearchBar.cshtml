@@ -1,11 +1,38 @@
-﻿@using (Html.BeginForm("Index", "PhamNhans", FormMethod.Get))
+﻿@model IEnumerable<Project4.Models.PhamNhan>
+ 
+@*<style>
+    .form-control {
+        text-align: center;  
+    }
+</style>*@
+@using (Html.BeginForm("Index", "PhamNhans", FormMethod.Get))
 {
     <div class="container">
         <div class="row">
-            <input type="text" class="form-control" placeholder="Tìm kiếm">
-            <button class="btn btn-primary" type="submit">
-                <i class="fa fa-search"></i>
-            </button> 
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="Tìm kiếm">
+            </div>
+            <div class="col-md-2"> 
+                @foreach (var item in Model)
+                {
+                    @Html.DropDownListFor(modelItem => item.IDKhu, ViewBag.Khu as SelectList
+                        , "Khu", new { @class = "form-control" })
+                }
+            </div> 
+            <div class="col-md-2">
+                @foreach (var item in Model) 
+                { 
+                    @Html.DropDownListFor(modelItem => item.PhongGiamID, ViewBag.Phong as SelectList
+                        , "Phòng giam", new { @class = "form-control" }) 
+                } 
+            </div> 
+            <div class="col-md-1">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <div class="col-md-4">
+            </div>
         </div>
     </div>
 }

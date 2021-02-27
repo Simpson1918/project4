@@ -15,10 +15,16 @@ namespace Project4.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: PhamNhans
-        public ActionResult Index()
-        {
+        public ActionResult Index()      
+        { 
+            var khuList = db.Khu.ToList();
+            ViewBag.Khu = new SelectList(khuList, "ID", "ID");
+              
+            var phongList = db.PhongGiam.ToList(); 
+            ViewBag.Phong = new SelectList(phongList, "ID", "ID");
+
             return View(db.PhamNhan.ToList());
-        }
+        } 
 
         // GET: PhamNhans/Details/5
         public ActionResult Details(Guid? id)

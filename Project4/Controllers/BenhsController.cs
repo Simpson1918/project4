@@ -15,7 +15,7 @@ namespace Project4.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Benhs
-        public ActionResult Index()
+        public ActionResult Index() 
         {
             return View(db.Benh.ToList());
         }
@@ -30,7 +30,7 @@ namespace Project4.Controllers
             Benh benh = db.Benh.Find(id);
             if (benh == null)
             {
-                return HttpNotFound();
+                return HttpNotFound(); 
             }
             return View(benh);
         }
